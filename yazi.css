@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background: #000;
+}
+
+p {
+    transform: translateX(-0.75em);
+    transition: transform 200ms;
+    cursor: pointer;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+p::before {
+    content: 'Front-end';
+    display: inline-block;
+    width: 2.6em;
+    opacity: 0;
+    transition: opasity 200ms;
+}
+
+p:hover {
+    transform: none;
+    color: white;
+    text-shadow: 0 0 5px #f40303, 0 0 25px #f40303, 0 0 50px #f40303, 0 0 100px #f40303;
+}
+
+p:hover::before {
+    opacity: 1;
+    color: #fff;
+    text-shadow: 0 0 5px #f40303, 0 0 25px #f40303, 0 0 50px #f40303, 0 0 100px #f40303;
+}
